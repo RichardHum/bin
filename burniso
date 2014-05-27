@@ -1,0 +1,2 @@
+#!/bin/bash
+cdrecord -v dev=/dev/sr0 $1

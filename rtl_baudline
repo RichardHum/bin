@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rtl_sdr -f $1 -s 2700000 - | baudline -reset -samplerate 2700000 -channels 2 -format u8 -quadrature -stdin
+

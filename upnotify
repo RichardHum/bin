@@ -1,0 +1,10 @@
+#!/bin/bash
+while :
+  do
+  ping -c1 $1
+  if [ $? -eq 0 ] ; then 
+     notify-send $1 " is now online"
+     break
+  fi
+  sleep 5
+done

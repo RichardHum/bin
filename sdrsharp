@@ -1,0 +1,2 @@
+#!/bin/bash
+mono /opt/sdrsharpsvn/sdr-sharp/trunk/Release/SDRSharp.exe

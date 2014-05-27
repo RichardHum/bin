@@ -1,0 +1,17 @@
+#!/bin/bash
+
+step=100
+file="/sys/class/backlight/intel_backlight/brightness"
+brightness=`cat $file`
+
+if [ $1 == "up" ]
+    then 
+	brightness=$(($brightness+$step))
+	echo $brightness > $file
+fi
+	
+if [ $1 == "down" ]
+    then
+	brightness=$(($brightness-$step))
+	echo $brightness > $file
+fi

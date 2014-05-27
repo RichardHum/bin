@@ -1,0 +1,17 @@
+#!/bin/bash
+
+file="/sys/class/leds/dell-laptop::touchpad/brightness"
+
+status=`synclient | grep TouchpadOff | awk {'print $3'}`
+
+if [ $status == 0 ]
+    then
+	synclient TouchpadOff=1
+	echo 1 > $file
+fi
+
+if [ $status == 1 ]
+    then
+	synclient TouchpadOff=0
+	echo 0 > $file
+fi

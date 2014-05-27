@@ -1,0 +1,2 @@
+#!/bin/bash
+arecord | lame --noreplaygain -V6 - `date +%m-%d-%Y-%H%M.%S.mp3`

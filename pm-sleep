@@ -1,0 +1,4 @@
+#!/bin/bash
+
+netcfg -a
+/usr/local/bin/slock & pm-suspend
