@@ -4,6 +4,7 @@ shopt -s nullglob
 
 while true
 do
+	unset files
 	for i in ~/.i3/wallpapers/*
 	do
 		[[ -f $i ]] && files+=("$i")
