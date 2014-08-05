@@ -1,5 +1,6 @@
 #!/bin/sh
-export PWD=`i3-msg -t get_tree | sed 's/{/{\n/g' | grep -A 3 "\"focused\":true" | sed 's/,/\n/g' | grep BulletMaster | sed 's/\"//g' | awk 'BEGIN {FS=":"};{print $3}' | sed 's/\~/\/root/g'` 
+hostname=`hostname`
+export PWD=`i3-msg -t get_tree | sed 's/{/{\n/g' | grep -A 3 "\"focused\":true" | sed 's/,/\n/g' | grep $hostname | sed 's/\"//g' | awk 'BEGIN {FS=":"};{print $3}' | sed 's/\~/\/root/g'` 
 
 cd "$PWD"
 exec urxvt
