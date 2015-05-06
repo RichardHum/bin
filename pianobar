@@ -1,0 +1,2 @@
+#!/bin/bash
+proxychains /usr/local/bin/pianobar 2> /dev/null

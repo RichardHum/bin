@@ -1,2 +1,2 @@
 #!/bin/bash
-notify-send -t 1500 "`mocp -Q \"%song - %artist\"`"
+notify-send -t 2000 "`mocp -Q \"%song - %artist\"`"
